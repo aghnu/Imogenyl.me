@@ -1,190 +1,358 @@
-$navigation_site_unit:      min(1.6vw, 1.25vh);
-$layer-base:                1000;
+@use 'sass:math';
+
+$navigation_site_unit:      min(1.8vw, 1.25vh);
+$button_base_size:          8em;
+$layer_base:                1000;
+
 
 @mixin navigation_items {
-    button {
-        font-size: $navigation_site_unit;
+
+    @keyframes breathing {
+        0% {
+            transform: scale(1);
+        }
+
+        25% {
+            transform: scale(0.95);
+        }
+
+        75% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .item {
         position: absolute;
-        width: 8em;
-        height: 8em;
+
+        &.focus {
+            z-index: $layer_base + 1;
+            // .button {
+            //     transform: scale(0.9);
+            // }
+            
+        }
+
+        &.hide {
+            .button {
+                transform: scale(0.9);
+                opacity: 0.65;
+            }
+        }
+    }
+
+    .button {
+        position: absolute;
+
         background-color: transparent;
         border: none;
         cursor: pointer;
+
+        transition: transform 0.5s, opacity 0.5s;
     }
 
     .qna_0 {
-        background-image: url(../img/navigation_balls/qna/qna_0.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 2.1);
+        height: calc(#{$button_base_size} * 2.1);
 
-        transform: translate(-15em, 5em) rotateZ(-20deg) scale(2.1);
-        z-index: $layer-base;
-        
+        transform: translate(-15em, 5em) rotateZ(-20deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+
+            background-image: url(../img/navigation_balls/qna/qna_0.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;     
+        }
     }
 
     .qna_1 {
-        background-image: url(../img/navigation_balls/qna/qna_1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 1.5);
+        height: calc(#{$button_base_size} * 1.5);
 
-        transform: translate(-1em, 2em) rotateZ(0deg) scale(1.5);
-        z-index: $layer-base;
+        transform: translate(-1em, 2em) rotateZ(0deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+
+            background-image: url(../img/navigation_balls/qna/qna_1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
     .qna_2 {
-        background-image: url(../img/navigation_balls/qna/qna_2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
 
-        transform: translate(4em, -13em) rotateZ(0deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(4em, -13em) rotateZ(0deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+
+            background-image: url(../img/navigation_balls/qna/qna_2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
     .qna_3 {
-        background-image: url(../img/navigation_balls/qna/qna_3.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 2.5);
+        height: calc(#{$button_base_size} * 2.5);
         
-        transform: translate(10em, 8em) rotateZ(10deg) scale(2.5);
-        z-index: $layer-base;
+        transform: translate(10em, #{$button_base_size}) rotateZ(10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../img/navigation_balls/qna/qna_3.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
 
     .wa_0 {
-        background-image: url(../img/navigation_balls/wa/wa_0.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 1);
+        height: calc(#{$button_base_size} * 1);
 
-        transform: translate(-8em, 10em) rotateZ(5deg) scale(1);
-        z-index: $layer-base;
+        transform: translate(-#{$button_base_size}, 10em) rotateZ(5deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../img/navigation_balls/wa/wa_0.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;  
+        }
     }
 
     .wa_1 {
-        background-image: url(../img/navigation_balls/wa/wa_1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
 
-        transform: translate(5em, 16.5em) rotateZ(-20deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(5em, 16.5em) rotateZ(-20deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/wa/wa_1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;   
+        }
     }
 
     .wa_2 {
-        background-image: url(../img/navigation_balls/wa/wa_2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 2.1);
+        height: calc(#{$button_base_size} * 2.1);
 
-        transform: translate(-15em, -10em) rotateZ(10deg) scale(2.1);
-        z-index: $layer-base;
+        transform: translate(-15em, -10em) rotateZ(10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../img/navigation_balls/wa/wa_2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;   
+        }
     }
 
     .wa_3 {
-        background-image: url(../img/navigation_balls/wa/wa_3.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
         
-        transform: translate(12em, -13em) rotateZ(10deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(12em, -13em) rotateZ(10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/wa/wa_3.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
     .wa_4 {
-        background-image: url(../img/navigation_balls/wa/wa_4.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 1.25);
+        height: calc(#{$button_base_size} * 1.25);
         
-        transform: translate(-12em, 15em) rotateZ(-10deg) scale(1.25);
-        z-index: $layer-base - 17;
+        transform: translate(-12em, 15em) rotateZ(-10deg);
+        z-index: $layer_base - 17;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/wa/wa_4.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
 
     .pw_0 {
-        background-image: url(../img/navigation_balls/pw/pw_0.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
 
-        transform: translate(17em, -5em) rotateZ(-20deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(17em, -5em) rotateZ(-20deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/pw/pw_0.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;  
+        }
         
     }
 
     .pw_1 {
-        background-image: url(../img/navigation_balls/pw/pw_1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
 
-        transform: translate(-20em, -2em) rotateZ(-10deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(-20em, -2em) rotateZ(-10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/pw/pw_1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;   
+        }
     }
 
     .pw_2 {
-        background-image: url(../img/navigation_balls/pw/pw_2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
         
-        transform: translate(-7em, -11.5em) rotateZ(10deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(-7em, -11.5em) rotateZ(10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/pw/pw_2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
     .pw_3 {
-        background-image: url(../img/navigation_balls/pw/pw_3.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
         
-        transform: translate(-2em, -5em) rotateZ(10deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(-2em, -5em) rotateZ(10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../img/navigation_balls/pw/pw_3.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
 
     .gzh_0 {
-        background-image: url(../img/navigation_balls/gzh/gzh_0.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;   
+        width: calc(#{$button_base_size} * 1.5);
+        height: calc(#{$button_base_size} * 1.5);
 
-        transform: translate(5em, -3em) rotateZ(0deg) scale(1.5);
-        z-index: $layer-base;
+        transform: translate(5em, -3em) rotateZ(0deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/gzh/gzh_0.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;   
+        }
     }
 
     .gzh_1 {
-        background-image: url(../img/navigation_balls/gzh/gzh_1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 1.5);
+        height: calc(#{$button_base_size} * 1.5);
         
-        transform: translate(-10em, -2.5em) rotateZ(-5deg) scale(1.5);
-        z-index: $layer-base;
+        transform: translate(-10em, -2.5em) rotateZ(-5deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/gzh/gzh_1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 
     .gzh_2 {
-        background-image: url(../img/navigation_balls/gzh/gzh_2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 1);
+        height: calc(#{$button_base_size} * 1);
         
-        transform: translate(13em, -9em) rotateZ(10deg) scale(1);
-        z-index: $layer-base;
+        transform: translate(13em, -9em) rotateZ(10deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../img/navigation_balls/gzh/gzh_2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     .fy_0 {
-        background-image: url(../img/navigation_balls/fy/fy_0.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; 
+        width: calc(#{$button_base_size} * 0.8);
+        height: calc(#{$button_base_size} * 0.8);
         
-        transform: translate(12em, -2em) rotateZ(0deg) scale(0.8);
-        z-index: $layer-base;
+        transform: translate(12em, -2em) rotateZ(0deg);
+        z-index: $layer_base;
+
+        .button {
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/navigation_balls/fy/fy_0.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
     }
 }
 
@@ -198,7 +366,7 @@ $layer-base:                1000;
     justify-content: center;
     align-items: center;
 
-    transform: translate(1.25em, 0em);
+    transform: translate(1.5em, -2em);
 
     .background {
         position: absolute;
