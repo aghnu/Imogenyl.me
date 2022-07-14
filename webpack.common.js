@@ -13,10 +13,10 @@ module.exports = {
           "sass-loader",
         ],
       },
-      {
-        test: /\.(mp3|ogg|svg|gif|png|webp)$/,
-        loader: 'file-loader'
-      },
+      // {
+      //   test: /\.(mp3|ogg|svg)$/,
+      //   loader: 'file-loader'
+      // },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,

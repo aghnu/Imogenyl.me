@@ -1,0 +1,223 @@
+$navigation_site_unit:      min(1.6vw, 1.25vh);
+$layer-base:                1000;
+
+@mixin navigation_items {
+    button {
+        font-size: $navigation_site_unit;
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .qna_0 {
+        background-image: url(../img/navigation_balls/qna/qna_0.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(-15em, 5em) rotateZ(-20deg) scale(2.1);
+        z-index: $layer-base;
+        
+    }
+
+    .qna_1 {
+        background-image: url(../img/navigation_balls/qna/qna_1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(-1em, 2em) rotateZ(0deg) scale(1.5);
+        z-index: $layer-base;
+    }
+
+    .qna_2 {
+        background-image: url(../img/navigation_balls/qna/qna_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(4em, -13em) rotateZ(0deg) scale(0.8);
+        z-index: $layer-base;
+    }
+
+    .qna_3 {
+        background-image: url(../img/navigation_balls/qna/qna_3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(10em, 8em) rotateZ(10deg) scale(2.5);
+        z-index: $layer-base;
+    }
+
+
+    .wa_0 {
+        background-image: url(../img/navigation_balls/wa/wa_0.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(-8em, 10em) rotateZ(5deg) scale(1);
+        z-index: $layer-base;
+    }
+
+    .wa_1 {
+        background-image: url(../img/navigation_balls/wa/wa_1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(5em, 16.5em) rotateZ(-20deg) scale(0.8);
+        z-index: $layer-base;
+    }
+
+    .wa_2 {
+        background-image: url(../img/navigation_balls/wa/wa_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(-15em, -10em) rotateZ(10deg) scale(2.1);
+        z-index: $layer-base;
+    }
+
+    .wa_3 {
+        background-image: url(../img/navigation_balls/wa/wa_3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(12em, -13em) rotateZ(10deg) scale(0.8);
+        z-index: $layer-base;
+    }
+
+    .wa_4 {
+        background-image: url(../img/navigation_balls/wa/wa_4.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(-12em, 15em) rotateZ(-10deg) scale(1.25);
+        z-index: $layer-base - 17;
+    }
+
+
+    .pw_0 {
+        background-image: url(../img/navigation_balls/pw/pw_0.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(17em, -5em) rotateZ(-20deg) scale(0.8);
+        z-index: $layer-base;
+        
+    }
+
+    .pw_1 {
+        background-image: url(../img/navigation_balls/pw/pw_1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(-20em, -2em) rotateZ(-10deg) scale(0.8);
+        z-index: $layer-base;
+    }
+
+    .pw_2 {
+        background-image: url(../img/navigation_balls/pw/pw_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(-7em, -11.5em) rotateZ(10deg) scale(0.8);
+        z-index: $layer-base;
+    }
+
+    .pw_3 {
+        background-image: url(../img/navigation_balls/pw/pw_3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(-2em, -5em) rotateZ(10deg) scale(0.8);
+        z-index: $layer-base;
+    }
+
+
+    .gzh_0 {
+        background-image: url(../img/navigation_balls/gzh/gzh_0.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+
+        transform: translate(5em, -3em) rotateZ(0deg) scale(1.5);
+        z-index: $layer-base;
+    }
+
+    .gzh_1 {
+        background-image: url(../img/navigation_balls/gzh/gzh_1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(-10em, -2.5em) rotateZ(-5deg) scale(1.5);
+        z-index: $layer-base;
+    }
+
+    .gzh_2 {
+        background-image: url(../img/navigation_balls/gzh/gzh_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(13em, -9em) rotateZ(10deg) scale(1);
+        z-index: $layer-base;
+    }
+
+    .fy_0 {
+        background-image: url(../img/navigation_balls/fy/fy_0.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
+        
+        transform: translate(12em, -2em) rotateZ(0deg) scale(0.8);
+        z-index: $layer-base;
+    }
+}
+
+#component-navigation {
+    font-size: $navigation_site_unit;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate(1.25em, 0em);
+
+    .background {
+        position: absolute;
+        width: 100em;
+        height: 100em;
+
+        background-image: url(../img/shape-apple.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
+    }
+
+    .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include navigation_items();
+    }
+}
