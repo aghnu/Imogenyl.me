@@ -129,10 +129,10 @@ $layer_base:                1000;
     }
 
     .qna_3 {
-        width: calc(#{$button_base_size} * 2.5);
-        height: calc(#{$button_base_size} * 2.5);
+        width: calc(#{$button_base_size} * 2.3);
+        height: calc(#{$button_base_size} * 2.3);
         
-        transform: translate(10em, #{$button_base_size}) rotateZ(10deg);
+        transform: translate(10em, 9em) rotateZ(10deg);
         z-index: $layer_base;
 
         .button {
