@@ -1,3 +1,54 @@
+
+.page-layout-list {
+    letter-spacing: 0.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    .list-item {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.25em;
+        .name {
+            font-size: 1.2em;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+
+        .list-item-secondary {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            
+            .desc {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .text {
+                    width: 60%;
+                    font-size: 0.85em;
+                    text-align: left;
+                    p {
+                        line-height: 1.5em;
+                    }
+                }
+                .date {
+                    width: 30%;
+                    margin-bottom: 1.25em;
+                    font-size: 1.2em;
+                    text-align: right;
+                    white-space: nowrap;
+                }                    
+            }
+        
+        } 
+    } 
+}
+
+
+
 .page-single-content-container {
     letter-spacing: 0.2em;
     text-align: center;
@@ -7,6 +58,7 @@
     justify-content: center;
     min-height: 90%;
     height: fit-content;
+    margin-bottom: 3.5em;
 }
 
 .page-multi-content-container {
@@ -22,7 +74,7 @@
 
     .tab-content {
         width: 100%;
-        margin-bottom: 3em;
+        margin-bottom: 7em;
     }
     
     .tabs-container {
@@ -57,6 +109,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: calc(100% / 3);
     
                 p {
                     font-size: 0.85em;
@@ -71,6 +124,17 @@
 .content {
     letter-spacing: 0.2em;
     text-align: center;
+
+    .left {
+        text-align: left;
+    }
+
+    .sep {
+        height: 0.2vh;
+        background-image: linear-gradient(to right,#0000 0%, rgb(46, 63, 103) 50%, #0000 100%);
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
 
     p {
         font-size: 0.85em;
@@ -108,13 +172,23 @@
     .title {
         letter-spacing: 0.2em;
         text-align: center;
-        height: 5em;
         font-size: 1.75em;
 
+        margin-top: 2em;
+        margin-bottom: 2em;
+
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         // background-color: red;
+        white-space: nowrap;
+
+        .sub {
+            font-size: calc(1 / 1.75 * 1em * 0.85);
+            line-height: 1.5em;
+            margin: 1em;
+        }
     }
 
     .background {
@@ -154,7 +228,7 @@
             @include hide-scrollbar();
 
             .text-container {
-                max-width: min(calc(100% - 3.5em * 2), 50em);
+                width: min(calc(100% - 3.5em * 2), 40em);
                 height: 100%;
             }
         }
