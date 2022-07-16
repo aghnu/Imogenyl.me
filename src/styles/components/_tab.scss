@@ -55,7 +55,7 @@ $layer_base:                1000;
             .desc {
                 width: 8em;
                 margin-top: 1em;
-                line-height: 1.5em;
+                line-height: 1.75em;
                 font-size: 0.85em;
             }
         }        
@@ -228,15 +228,17 @@ $layer_base:                1000;
         }
     
         .container {
+            @include hide-scrollbar();
             pointer-events: all;
             position: absolute;
             width: calc(100% - #{$tab-title-size-unit-w});
             height: 100%;
             overflow: scroll;
+            overflow-x: hidden;
             right: 0;
             z-index: $layer_base - 1;
 
-            background-image: linear-gradient(to right, #1c3576 5%, rgba(24, 30, 56, 0.85) 60%);
+            background-image: linear-gradient(to right, rgba(28, 53, 118) 3%, rgba(24, 30, 56, 0.75) 80%);
             box-shadow: -0.25em 0 1em rgba(0, 0, 0, 0.4);
             
         }

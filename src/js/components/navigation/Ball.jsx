@@ -17,6 +17,60 @@ const animationBreathingDurationMax = 12;
 const animationWonderingDurationMin = 2;
 const animationWonderingDurationMax = 12;
 
+
+function addButtonBehavior(btnEl, downFunc, upFunc) {
+    let buttonDown = false;
+
+    // touch events
+    btnEl.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        buttonDown = true;
+        downFunc();
+    });
+
+    btnEl.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        buttonDown = false;
+        upFunc();
+    });
+
+    btnEl.addEventListener('touchcancel', (e) => {
+        e.preventDefault();
+        buttonDown = false;
+        upFunc();
+    });
+
+    // click events
+    btnEl.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        buttonDown = true;
+        downFunc();
+    });
+
+    btnEl.addEventListener('mouseup', (e) => {
+        e.preventDefault();
+        buttonDown = false;
+        upFunc();
+    });
+
+    //global up
+    const globalUpFunc = () => {
+        if (buttonDown) {
+            buttonDown = false;
+            upFunc();
+        }        
+    }
+    document.addEventListener('mouseup', globalUpFunc);
+
+    return {
+        clear: () => {
+            document.removeEventListener('mouseup', globalUpFunc);
+        }
+    }
+}
+
+
+
 export class Ball extends React.Component {
 
     constructor(props) {
@@ -25,6 +79,7 @@ export class Ball extends React.Component {
         this.animationWonderingEl = React.createRef();
         this.animationBreathingEL = React.createRef();
         this.button = React.createRef();
+        this.buttonClick = React.createRef();
         this.item = React.createRef();
 
         this.animationBreathing = this.animationBreathing.bind(this);
@@ -35,7 +90,7 @@ export class Ball extends React.Component {
     initButtonBehavior() {
 
 
-        this.button.current.onmouseenter = () => {
+        this.buttonClick.current.onmouseenter = () => {
             const children = this.item.current.parentNode.children;
             for (let i = 0; i < children.length; i++) {
                 if (children[i] === this.item.current) {
@@ -46,7 +101,7 @@ export class Ball extends React.Component {
             }
         }
 
-        this.button.current.onmouseleave = () => {
+        this.buttonClick.current.onmouseleave = () => {
             const children = this.item.current.parentNode.children;
             for (let i = 0; i < children.length; i++) {
                     children[i].classList.remove('focus');
@@ -54,9 +109,12 @@ export class Ball extends React.Component {
             }
         }
 
-        this.button.current.onclick = () => {
+        this.buttonClickControl = addButtonBehavior(this.buttonClick.current, ()=>{
+            this.button.current.classList.add('down');
+        }, ()=>{
+            this.button.current.classList.remove('down');
             window.location.hash = '#' + this.props.itemStyleClass;
-        }
+        });
 
         this.button.current.onload = () => {
             this.loadedAnimationTimeout = setTimeout(() => {
@@ -107,14 +165,21 @@ export class Ball extends React.Component {
     componentWillUnmount() {
          this.clearAnimation();
          clearTimeout(this.loadedAnimationTimeout);
+         if (this.buttonClickControl) {
+            this.buttonClickControl.clear();
+         }
     }
 
     render() {
         return (
             <div className={this.props.itemStyleClass + ' item'} title={this.props.itemTitle} ref={this.item}>
                 <div ref={this.animationWonderingEl}>
-                    <div ref={this.animationBreathingEL}>
+                    <div className="wrapper" ref={this.animationBreathingEL}>
+                        <div className="button-click" ref={this.buttonClick}>
+                            
+                        </div>
                         <img className="button" ref={this.button} />
+                        
                     </div>
                 </div>
                 

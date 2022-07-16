@@ -76,6 +76,7 @@ export class HomePage extends React.Component {
                         <TabAbout content={about}/>
                     </Tab>                
                 </div>
+                {this.props.children}
                 <Footer>
                     © 2022 Yu Liu
                 </Footer>

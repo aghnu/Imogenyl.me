@@ -1,7 +1,7 @@
 import React from "react"
 
-const playFrameDuration = 3;
-const fadingDuration = 0.55;
+const playFrameDuration = 3.5;
+const fadingDuration = 0.5;
 
 export class IntroPage extends React.Component {
     constructor(props) {
