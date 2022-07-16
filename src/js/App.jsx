@@ -2,7 +2,8 @@ import React from 'react';
 import { IntroPage } from './IntroPage.jsx';
 import { HomePage } from './HomePage.jsx';
 
-const switchPadeAnimationDuration = 0.65;
+const switchPadeAnimationDuration = 0.5;
+
 
 export class App extends React.Component {
     constructor(props) {
@@ -17,9 +18,25 @@ export class App extends React.Component {
         this.generatePage = this.generatePage.bind(this);
         this.getCurrentPage = this.getCurrentPage.bind(this);
         this.switchPage = this.switchPage.bind(this);
+        this.startURLListener = this.startURLListener.bind(this);
+
+        this.pages = [
+            'home'
+        ]
+    }
+
+    startURLListener() {
+
+        this.urlChangeFunc = () => {
+            const page = this.getCurrentPage();
+            this.switchPage(page);
+        }
+
+        window.addEventListener('hashchange', this.urlChangeFunc);
     }
 
     componentDidMount() {
+        this.startURLListener();
         this.app.current.style.transition = `opacity ${switchPadeAnimationDuration}s`;
         this.switchAnimationTimeout = setTimeout(() => {
             this.app.current.classList.add('show');
@@ -28,29 +45,31 @@ export class App extends React.Component {
 
     componentWillUnmount() {
         clearTimeout(this.switchAnimationTimeout);
+        if (this.urlChangeFunc) {
+            window.removeEventListener('hashchang', this.urlChangeFunc);
+        }
     }
 
     componentDidUpdate() {
         this.switchAnimationTimeout = setTimeout(() => {
             this.app.current.classList.add('show');
-        }, 100);
+        }, 500);
     }
 
     switchPage(page) {
-
         this.app.current.classList.remove('show');
-
         this.switchAnimationTimeout = setTimeout(() => {
             this.setState((state,props) => {
                 if (state.page !== page) {
                     // will update
-    
                     
+                    return {page: page};
                 } else {
                     // willnot update
+                    return {};
                 }
     
-                return {page: page};
+                
             });
         }, switchPadeAnimationDuration * 1000);
         
@@ -60,11 +79,14 @@ export class App extends React.Component {
 
     getCurrentPage() {
         const page = window.location.hash;
-        switch (page) {
-            case "#home":
-                return "home"
-            default:
-                return "home"
+        if (page === "") {
+            return "home";
+        } else {
+            if (this.pages.indexOf(page) >= 0) {
+                return page;
+            } else {
+                return "home";
+            }
         }
     }
 
@@ -87,12 +109,6 @@ export class App extends React.Component {
                     {this.generatePage(this.state.page)}
             </div>
         );
-
-        // return(
-        //     <div id="site-body">
-        //         <HomePage></HomePage>
-        //     </div>
-        // )
     }
 
 }

@@ -8,7 +8,7 @@ export class TabTimeline extends React.Component {
                     <div className="mark"><div className="bg"></div></div>
                     <div className="text">
                         <p className="year">{item.year}</p>
-                        <p className="desc">{item.desc.map((item) => <div>{item}</div>)}</p>
+                        <div className="desc">{item.desc.map((item, index) => <div key={index}>{item}</div>)}</div>
                     </div>
                 </div>
                 

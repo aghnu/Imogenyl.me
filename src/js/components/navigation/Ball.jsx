@@ -54,6 +54,10 @@ export class Ball extends React.Component {
             }
         }
 
+        this.button.current.onclick = () => {
+            window.location.hash = '#' + this.props.itemStyleClass;
+        }
+
         this.button.current.onload = () => {
             this.loadedAnimationTimeout = setTimeout(() => {
                 this.button.current.classList.add('show');

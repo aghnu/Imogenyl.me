@@ -4,24 +4,26 @@ $tab-title-size-unit-h:       12.5em;
 $tab-title-size-unit-w:       2.5em;
 $layer_base:                1000;
 
-.item {
-    white-space: nowrap;
-    display: flex;
-    color: #7ea6e8;
-    margin: 0 0 5em 0;
-
-    .mark {
+.tab-items {
+    .item {
+        white-space: nowrap;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
+        color: #7ea6e8;
+        margin: 0 0 7em 0;
 
-        .bg {
-            background-image: linear-gradient(to right,rgba(255, 255, 255, 0.25), #0000 85%);
-            height: 0.2vh;
-            width: 4em;
+        .mark {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+
+            .bg {
+                background-image: linear-gradient(to right,rgba(255, 255, 255, 0.25), #0000 85%);
+                height: 0.2vh;
+                width: 4em;
+            }
+
         }
-
     }
 
 }
@@ -130,7 +132,7 @@ $layer_base:                1000;
         &.focus {
             .tab {
                 .title {
-                    height: calc(#{$tab-title-size-unit-h} + 1em);
+                    // height: calc(#{$tab-title-size-unit-h} + 1em);
                     width: calc(#{$tab-title-size-unit-w} + 1em);
                     // transform: scale(1.1);
                 }
@@ -148,7 +150,7 @@ $layer_base:                1000;
             .tab {
                 .title {
                     width: calc(#{$tab-title-size-unit-w} + 1em);
-                    height: calc(#{$tab-title-size-unit-h} * 2 + 1em);
+                    // height: calc(#{$tab-title-size-unit-h} * 2 + 1em);
                     // transform: scale(1.1);
                 }
             }
