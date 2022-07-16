@@ -5,31 +5,31 @@
     "items": [
         {
             "year": "2009",
-            "desc": "开始同人创作"
+            "desc": ["开始同人创作"]
         },
         {
             "year": "2012 - 2014",
-            "desc": "休学生涯"
+            "desc": ["休学生涯"]
         },
         {
             "year": "2017",
-            "desc": "入学 Western University (World Top 200) 心理学 + 计算机专业"
+            "desc": ["入学", "Western University", "(World Top 200)", "心理学 + 计算机专业"]
         },
         {
             "year": "2018",
-            "desc": "转入 Philosophy 哲学系 (专业 World Top 50)"
+            "desc": ["转入", "Philosophy 哲学系", "(专业 World Top 50)"]
         },
         {
             "year": "2019",
-            "desc": "Minor 电影学 学习语言哲学 & 逻辑学 接触学习命理"
+            "desc": ["Minor 电影学", "学习语言哲学", "& 逻辑学", "接触学习命理"]
         },
         {
             "year": "2020",
-            "desc": "艺恩世纪市场部实习"
+            "desc": ["艺恩世纪市场部实习"]
         },
         {
             "year": "2021",
-            "desc": "加入一家业务转型的初创企业"
+            "desc": ["加入一家业务转型", "的初创企业"]
         }
     ]
 }

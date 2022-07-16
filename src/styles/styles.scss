@@ -1,4 +1,19 @@
 $site-size-unit:    min(2vh, 3vw);
 
+@mixin noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;  
+}
 
-@import 'fonts', 'base', 'main', 'components';
+@mixin hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@import 'fonts', 'base', 'main', 'components', 'pages';

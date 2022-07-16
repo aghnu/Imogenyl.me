@@ -12,6 +12,12 @@ export class Tab extends React.Component {
     }
 
     initTabBehavior() {
+
+        this.loadedAnimationTimeout = setTimeout(() => {
+            this.tab.current.classList.remove('hide');
+        }, 1750);
+
+
         this.open = false;
         this.tabTitle.current.onclick = () => {
             const children = this.tab.current.parentNode.children;
@@ -33,6 +39,14 @@ export class Tab extends React.Component {
             }            
         }
 
+        this.tabTitle.current.onmouseenter = () => {
+            this.tab.current.classList.add('focus');
+        };
+
+        this.tabTitle.current.onmouseleave = () => {
+            this.tab.current.classList.remove('focus');
+        };
+
         this.tabBackground.current.onclick = () => {
             if (this.open) {
                 this.open = false;
@@ -51,13 +65,13 @@ export class Tab extends React.Component {
     }
 
     componentWillUnmount() {
-
+        clearTimeout(this.loadedAnimationTimeout);
     }
 
 
     render() {
         return (
-            <div id="component-tab" className={this.props.tabOrder} ref={this.tab}>
+            <div id="component-tab" className={this.props.tabOrder + " hide"} ref={this.tab}>
                 <div className={"background"} ref={this.tabBackground}></div>
                 <div className={"tab"}>
                     <div className="title" ref={this.tabTitle}>

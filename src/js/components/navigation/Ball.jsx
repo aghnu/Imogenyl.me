@@ -53,6 +53,16 @@ export class Ball extends React.Component {
                     children[i].classList.remove('hide');
             }
         }
+
+        this.button.current.onload = () => {
+            this.loadedAnimationTimeout = setTimeout(() => {
+                this.button.current.classList.add('show');
+            }, 500);
+            
+        }
+
+        this.button.current.src = this.props.imgSrc;
+
     }
 
     animationBreathing() {
@@ -63,8 +73,6 @@ export class Ball extends React.Component {
     }
 
     animationWondering() {
-
-        console.log("Yes");
 
         const animationDuration = Math.random() * (animationWonderingDurationMax - animationWonderingDurationMin) + animationWonderingDurationMin;
         this.animationWonderingEl.current.style.width = `100%`;
@@ -94,6 +102,7 @@ export class Ball extends React.Component {
 
     componentWillUnmount() {
          this.clearAnimation();
+         clearTimeout(this.loadedAnimationTimeout);
     }
 
     render() {
@@ -101,7 +110,7 @@ export class Ball extends React.Component {
             <div className={this.props.itemStyleClass + ' item'} title={this.props.itemTitle} ref={this.item}>
                 <div ref={this.animationWonderingEl}>
                     <div ref={this.animationBreathingEL}>
-                        <button className="button" ref={this.button}></button>
+                        <img className="button" ref={this.button} />
                     </div>
                 </div>
                 

@@ -3,12 +3,14 @@
     "items": [
         {
             "title": "电影短评色戒",
-            "styleClass": "pw_3"
+            "styleClass": "pw_3",
+            "iconPath": "pw_3.webp"
         },
         
         {
             "title": "Q&A写作是什么",
-            "styleClass": "qna_1"
+            "styleClass": "qna_1",
+            "iconPath": "qna_1.webp"
         },
 
 
@@ -16,73 +18,88 @@
 
         {
             "title": "毕业演讲长文案2022",
-            "styleClass": "wa_4"
+            "styleClass": "wa_4",
+            "iconPath": "wa_4.webp"
         },
         {
             "title": "随记写作指导文本分析",
-            "styleClass": "pw_0"
+            "styleClass": "pw_0",
+            "iconPath": "pw_0.webp"
         },
         {
             "title": "剧评进击的巨人",
-            "styleClass": "pw_1"
+            "styleClass": "pw_1",
+            "iconPath": "pw_1.webp"
         },
         {
             "title": "影评2021春节档三部",
-            "styleClass": "pw_2"
+            "styleClass": "pw_2",
+            "iconPath": "pw_2.webp"
         },
 
 
         {
             "title": "艺术专栏公众号推文时间的礼物",
-            "styleClass": "gzh_0"
+            "styleClass": "gzh_0",
+            "iconPath": "gzh_0.webp"
         },
 
 
         
         {
             "title": "品牌宣言飒立于风",
-            "styleClass": "wa_2"
+            "styleClass": "wa_2",
+            "iconPath": "wa_2.webp"
         },
         {
             "title": "商业计划书",
-            "styleClass": "wa_3"
+            "styleClass": "wa_3",
+            "iconPath": "wa_3.webp"
         },
 
         {
             "title": "Q&A对广告的热爱是什么",
-            "styleClass": "qna_2"
+            "styleClass": "qna_2",
+            "iconPath": "qna_2.webp"
         },
         {
             "title": "Q&为什么哲学是一种实践",
-            "styleClass": "qna_0"
+            "styleClass": "qna_0",
+            "iconPath": "qna_0.webp"
         },
         {
             "title": "主题SLOGAN品牌宣讲",
-            "styleClass": "wa_1"
+            "styleClass": "wa_1",
+            "iconPath": "wa_1.webp"
         },
         {
             "title": "翻译稿品牌手册&传播方案",
-            "styleClass": "fy_0"
+            "styleClass": "fy_0",
+            "iconPath": "fy_0.webp"
         },
 
 
 
         {
             "title": "回想回想概念文案",
-            "styleClass": "wa_0"
+            "styleClass": "wa_0",
+            "iconPath": "wa_0.webp"
         },
 
         {
             "title": "展览预热公众号回想回想",
-            "styleClass": "gzh_1"
+            "styleClass": "gzh_1",
+            "iconPath": "gzh_1.webp"
         },
         {
             "title": "深度访谈公众号推文创作分享",
-            "styleClass": "gzh_2"
+            "styleClass": "gzh_2",
+            "iconPath": "gzh_2.webp"
         },
         {
             "title": "Q&A品牌是什么",
-            "styleClass": "qna_3"
+            "styleClass": "qna_3",
+            "iconPath": "qna_3.webp"
         }
 
         

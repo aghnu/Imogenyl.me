@@ -1,26 +1,98 @@
 import React from 'react';
-import { Navigation } from './components/navigation/Navigation.jsx';
-import { Ball } from "./components/navigation/Ball.jsx";
-import { Tab } from './components/sidetab/Tab.jsx';
-import { Footer } from "./components/Footer.jsx";
-import navs from '../json/navigations.json';
-import timeline from '../json/timeline.json';
-import about from '../json/about.json';
+import { IntroPage } from './IntroPage.jsx';
+import { HomePage } from './HomePage.jsx';
 
-export function App() {
-    return (
-        <div id="site-body">
-            <Navigation>
-                {navs.items.map((item) => <Ball itemTitle={item.title} itemStyleClass={item.styleClass} key={item.title} />)}
-            </Navigation>
-            <div>
-                <Tab tabTitle={timeline.title} tabOrder={timeline.order}/>
-                <Tab tabTitle={about.title} tabOrder={about.order}/>                
+const switchPadeAnimationDuration = 0.65;
+
+export class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            page: "intro"
+        }
+
+        this.app = React.createRef();
+
+        this.generatePage = this.generatePage.bind(this);
+        this.getCurrentPage = this.getCurrentPage.bind(this);
+        this.switchPage = this.switchPage.bind(this);
+    }
+
+    componentDidMount() {
+        this.app.current.style.transition = `opacity ${switchPadeAnimationDuration}s`;
+        this.switchAnimationTimeout = setTimeout(() => {
+            this.app.current.classList.add('show');
+        }, 100);
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.switchAnimationTimeout);
+    }
+
+    componentDidUpdate() {
+        this.switchAnimationTimeout = setTimeout(() => {
+            this.app.current.classList.add('show');
+        }, 100);
+    }
+
+    switchPage(page) {
+
+        this.app.current.classList.remove('show');
+
+        this.switchAnimationTimeout = setTimeout(() => {
+            this.setState((state,props) => {
+                if (state.page !== page) {
+                    // will update
+    
+                    
+                } else {
+                    // willnot update
+                }
+    
+                return {page: page};
+            });
+        }, switchPadeAnimationDuration * 1000);
+        
+
+
+    }
+
+    getCurrentPage() {
+        const page = window.location.hash;
+        switch (page) {
+            case "#home":
+                return "home"
+            default:
+                return "home"
+        }
+    }
+
+    generatePage(page) {
+        switch(page) {
+            case 'home':
+                return <HomePage />;
+
+            case 'intro':
+                return <IntroPage callbackFinish={() => {
+                    this.switchPage(this.getCurrentPage());
+                }}/>;
+        }            
+    }
+
+    render() {
+
+        return (
+            <div id="site-body" ref={this.app}>
+                    {this.generatePage(this.state.page)}
             </div>
+        );
 
-            <Footer>
-                © 2022 Yu Liu
-            </Footer>
-        </div>
-    )
+        // return(
+        //     <div id="site-body">
+        //         <HomePage></HomePage>
+        //     </div>
+        // )
+    }
+
 }
