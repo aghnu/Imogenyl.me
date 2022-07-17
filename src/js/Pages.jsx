@@ -546,8 +546,10 @@ class SingleContentContainer extends React.Component {
     render() {
         return (
             <div className="page-single-content-container">
-                {this.props.title && <p className="title">{this.props.title}</p>}
-                {this.props.content}
+                <div className="page-container">
+                    {this.props.title && <p className="title">{this.props.title}</p>}
+                    {this.props.content}                    
+                </div>
             </div>
         );
     }
