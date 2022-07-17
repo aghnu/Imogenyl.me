@@ -339,7 +339,7 @@ $layer_base:                1000;
     justify-content: center;
     align-items: center;
 
-    transform: translate(1.5em, -3em);
+    transform: translate(1.5em, -1.5em);
 
     .background {
         @include noselect();
