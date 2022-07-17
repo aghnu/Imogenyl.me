@@ -2,13 +2,13 @@
 
     "items": [
         {
-            "title": "电影短评色戒",
+            "title": "电影短评 《色戒》",
             "styleClass": "pw_3",
             "iconPath": "pw_3.webp"
         },
         
         {
-            "title": "Q&A写作是什么",
+            "title": "Q&Q&A 写作是什么",
             "styleClass": "qna_1",
             "iconPath": "qna_1.webp"
         },
@@ -17,29 +17,29 @@
 
 
         {
-            "title": "毕业演讲长文案2022",
+            "title": "毕业演讲 长文案",
             "styleClass": "wa_4",
             "iconPath": "wa_4.webp"
         },
         {
-            "title": "随记写作指导文本分析",
+            "title": "写作指导-文本分析 & 个人随记",
             "styleClass": "pw_0",
             "iconPath": "pw_0.webp"
         },
         {
-            "title": "剧评进击的巨人",
+            "title": "剧评 进击的巨人",
             "styleClass": "pw_1",
             "iconPath": "pw_1.webp"
         },
         {
-            "title": "影评2021春节档三部",
+            "title": "影评 2021春节档3部",
             "styleClass": "pw_2",
             "iconPath": "pw_2.webp"
         },
 
 
         {
-            "title": "艺术专栏公众号推文时间的礼物",
+            "title": "艺术专栏 公众号推文 时间的礼物",
             "styleClass": "gzh_0",
             "iconPath": "gzh_0.webp"
         },
@@ -47,7 +47,7 @@
 
         
         {
-            "title": "品牌宣言飒立于风",
+            "title": "品牌宣言 飒 立于风",
             "styleClass": "wa_2",
             "iconPath": "wa_2.webp"
         },
@@ -58,22 +58,22 @@
         },
 
         {
-            "title": "Q&A对广告的热爱是什么",
+            "title": "Q&A 对广告的热爱是什么",
             "styleClass": "qna_2",
             "iconPath": "qna_2.webp"
         },
         {
-            "title": "Q&为什么哲学是一种实践",
+            "title": "Q&A 为什么哲学是一种实践",
             "styleClass": "qna_0",
             "iconPath": "qna_0.webp"
         },
         {
-            "title": "主题SLOGAN品牌宣讲",
+            "title": "品牌宣讲 主题slogan",
             "styleClass": "wa_1",
             "iconPath": "wa_1.webp"
         },
         {
-            "title": "翻译稿品牌手册&传播方案",
+            "title": "翻译稿：品牌手册 & 传播方案",
             "styleClass": "fy_0",
             "iconPath": "fy_0.webp"
         },
@@ -81,23 +81,23 @@
 
 
         {
-            "title": "回想回想概念文案",
+            "title": "回想 回想/那心的铁片/也要发出轰响 概念文案&展签文案",
             "styleClass": "wa_0",
             "iconPath": "wa_0.webp"
         },
 
         {
-            "title": "展览预热公众号回想回想",
+            "title": "展览预热 公众号推文 回想回想",
             "styleClass": "gzh_1",
             "iconPath": "gzh_1.webp"
         },
         {
-            "title": "深度访谈公众号推文创作分享",
+            "title": "深度访谈 公众号推文 回想回想",
             "styleClass": "gzh_2",
             "iconPath": "gzh_2.webp"
         },
         {
-            "title": "Q&A品牌是什么",
+            "title": "Q&A 品牌是什么 & 写同人对我的启发",
             "styleClass": "qna_3",
             "iconPath": "qna_3.webp"
         }

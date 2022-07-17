@@ -80,8 +80,8 @@ export function preLoadingImages(callback) {
 
 export class HomePage extends React.Component {
     render() {
-        const Balls = navs.items.map((item) => {
-            return <Ball itemTitle={item.title} itemStyleClass={item.styleClass} key={item.title} imgSrc={pathSrcLookup[item.styleClass]}/>
+        const Balls = navs.items.map((item, index) => {
+            return <Ball itemTitle={item.title} itemStyleClass={item.styleClass} key={index} imgSrc={pathSrcLookup[item.styleClass]}/>
         });
         return (
             <div>
