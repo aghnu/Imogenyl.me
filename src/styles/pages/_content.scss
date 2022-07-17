@@ -1,3 +1,24 @@
+@mixin page-content-scroll-fade {
+    .scroll-fade {
+        position: absolute;
+        width: min(calc(100% - 3.5em * 2), 50em);
+        
+        height: 3.5em;
+        pointer-events: none;
+
+        &.bottom {
+            bottom: 0;
+            background-image: linear-gradient(to top, rgb(19, 27, 46), #0000);
+        }
+
+        &.top {
+            top: 0;
+            background-image: linear-gradient(to bottom, rgb(19, 27, 46), #0000);
+        }
+        
+    }
+}
+
 
 .page-layout-list {
     letter-spacing: 0.2em;
@@ -58,7 +79,7 @@
     justify-content: center;
     min-height: 90%;
     height: fit-content;
-    
+    @include page-content-scroll-fade();
 
     .page-container {
         width: 100%;
@@ -75,6 +96,7 @@
     justify-content: center;
     min-height: 90%;
     height: fit-content;
+    @include page-content-scroll-fade();
 
 
     .tab-content {

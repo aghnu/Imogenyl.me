@@ -557,8 +557,10 @@ class SingleContentContainer extends React.Component {
             <div className="page-single-content-container">
                 <div className="page-container">
                     {this.props.title && <p className="title">{this.props.title}</p>}
-                    {this.props.content}                    
+                    {this.props.content}      
                 </div>
+                <div className="scroll-fade top"></div>
+                <div className="scroll-fade bottom"></div>
             </div>
         );
     }
@@ -598,6 +600,7 @@ class MultiContentContainer extends React.Component {
                 <div className="tabs-container">
                     <div className="tabs">{titlesTabs}</div>
                 </div>
+                <div className="scroll-fade top"></div>
                 
             </div>
         );
