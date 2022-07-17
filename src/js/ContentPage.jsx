@@ -135,7 +135,7 @@ export class ContentPage extends React.Component {
                         </div>
                     </div>
                     <div className="close-button" ref={this.closeButton}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 40 40"><g transform="translate(1.414 1.414)"><line x2="37" y2="37" fill="none" stroke="#7ea6e8" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="2"/><line x1="37" y2="37" fill="none" stroke="#7ea6e8" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="2"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 40 40"><g transform="translate(1.414 1.414)"><line x2="37" y2="37" fill="none" stroke="#7ea6e8" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="2"/><line x1="37" y2="37" fill="none" stroke="#7ea6e8" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="2"/></g></svg>
                     </div>
                 </div>
             </div>            

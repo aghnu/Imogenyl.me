@@ -24,35 +24,16 @@ $intro-font-size: min(2vw, 2.25vh);
             // display
             text-align: center;
             color: #7ea6e8;
-            letter-spacing: 0.5em;
+            
             white-space: nowrap;
 
             p {
                 line-height: 2em;
+                letter-spacing: 0.5em;
             }
 
-            &.frame_0 {
-                display: flex;
-                flex-direction: column;
-                gap: 12.5em;
-            }
-
-            &.frame_1 {
-                display: flex;
-                flex-direction: column;
-                gap: 3em;
-            }
-
-            .t0 {
-                font-size: 1.15em;
-            }
-
-            .t1 {
-                font-size: 2.85em;
-            }
-
-            .p0 {
-                font-size: 1.15em;
+            .large {
+                font-size: 2em;
             }
 
             

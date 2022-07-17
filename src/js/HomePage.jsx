@@ -58,6 +58,26 @@ const pathSrcLookup = {
     'wa_4': wa_4,
 }
 
+export function preLoadingImages(callback) {
+    // single thread, so no thread safty issue
+    let readyCounter = 0;
+    let imgNum = Object.getOwnPropertyNames(pathSrcLookup).length;
+    for (let key in pathSrcLookup) {
+        new Promise(()=>{
+            const path = pathSrcLookup[key];
+            const img = document.createElement('img');
+            img.onload = () => {
+                readyCounter += 1;
+                if (readyCounter === imgNum) {
+                    callback();
+                }
+            }
+            img.src = path;
+        });
+        
+    }
+}
+
 export class HomePage extends React.Component {
     render() {
         const Balls = navs.items.map((item) => {

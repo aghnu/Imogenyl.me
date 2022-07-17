@@ -1,6 +1,6 @@
 import React from "react"
 
-const playFrameDuration = 5;
+const playFrameDuration = 10;
 const fadingDuration = 0.5;
 
 export class IntroPage extends React.Component {
@@ -18,22 +18,26 @@ export class IntroPage extends React.Component {
 
         this.frames = [
             (<div></div>),
-            (<div className="frame frame_0">
-                <p className="t0">Imogen Liu 是 ... ...</p>
-                <p className="t1">一颗诚实的苹果树。</p>
-                <p className="t0">因为，</p>
+            (<div className="frame">
+                <p>
+                    Imogen Liu 是 ... ...
+                    <br/><br/><br/><br/><br/>
+                    <br/><span className="large">一颗诚实的苹果树。</span>
+                    <br/><br/><br/><br/><br/>
+                    <br/>因为，
+                </p>
             </div>),
-            (<div className="frame frame_1">
-                <div>
-                    <p className="p0">“一个彻底诚实的人是从不面对选择的，</p>
-                    <p className="p0">那条路永远会清楚无二地呈现在你面前，</p>
-                    <p className="p0">这和你的憧憬无关，</p>
-                    <p className="p0">就像你是一颗苹果树，你憧憬结橘子，</p>
-                    <p className="p0">但你还是诚实地结出苹果一样。</p>                    
-                </div>
-                <div>
-                    <p className="p0">-顾城</p>
-                </div>
+            (<div className="frame">
+                <p>
+                    “一个彻底诚实的人是从不面对选择的，
+                    <br/>那条路永远会清楚无二地呈现在你面前，
+                    <br/>这和你的憧憬无关，
+                    <br/>就像你是一颗苹果树，你憧憬结橘子，
+                    <br/>但你还是诚实地结出苹果一样。
+                    <br/>
+                    <br/>-顾城                  
+                </p>
+                    
 
                 
             </div>)
