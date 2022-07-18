@@ -1,6 +1,6 @@
 import React from "react"
 
-const playFrameDuration = 10;
+const playFrameDuration = [5, 10];
 const fadingDuration = 0.5;
 
 export class IntroPage extends React.Component {
@@ -57,7 +57,7 @@ export class IntroPage extends React.Component {
                     const oldFrameIndex = state.frameIndex;
 
                     if (oldFrameIndex < (this.frames.length - 1)) {
-                        this.playTimeout = setTimeout(play, playFrameDuration * 1000);    
+                        this.playTimeout = setTimeout(play, playFrameDuration[oldFrameIndex] * 1000);    
                         return {frameIndex: oldFrameIndex + 1};
                     } else {
                         this.props.callbackFinish();
