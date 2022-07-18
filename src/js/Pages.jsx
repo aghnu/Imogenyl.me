@@ -427,7 +427,7 @@ export function PagePW0(props) {
         <div className="content">
             <p className="title">个人随记</p>
             <p className="left">
-                高中时那些白人男老师像无害的大型兔子，在叽叽喳喳的学生中间不知所措，搜肠刮肚半天也只能说出一句不痛不痒的“guys you're not supposed to do that”; 我最喜欢的一个老师，身 材高大个性懒散，整节课地播放本应该留作作业的小说的音频，我偷偷瞄他: 目光涣散，捧着 kindle的手半小时都不动一下。我们一直以为他不喜欢我们且懒得教我们。最后一节课，我们围坐一圈，他给我们念了童话书，给了我们每个人一封他亲手写的信。他站在讲台中央理应讲些祝福的话，却眼圈红红耳朵红红，一个字说不出，第一排的男生忍不住要喊，“C'mon man”。我很久之后才明白，我们能如此是因为那时候我是kid，后来我念了大学，校园里随处可见和我高中老师一样的白男，但我变成了亚洲人、中国人、女人，我们在彼此眼里都成了应当被宽容的傻逼 
+                高中时那些白人男老师像无害的大型兔子，在叽叽喳喳的学生中间不知所措，搜肠刮肚半天也只能说出一句不痛不痒的“guys you're not supposed to do that”; 我最喜欢的一个老师，身材高大个性懒散，整节课地播放本应该留作作业的小说的音频，我偷偷瞄他: 目光涣散，捧着 kindle的手半小时都不动一下。我们一直以为他不喜欢我们且懒得教我们。最后一节课，我们围坐一圈，他给我们念了童话书，给了我们每个人一封他亲手写的信。他站在讲台中央理应讲些祝福的话，却眼圈红红耳朵红红，一个字说不出，第一排的男生忍不住要喊，“C'mon man”。我很久之后才明白，我们能如此是因为那时候我是kid，后来我念了大学，校园里随处可见和我高中老师一样的白男，但我变成了亚洲人、中国人、女人，我们在彼此眼里都成了应当被宽容的傻逼 
             </p>
         </div>,
     ];
@@ -514,6 +514,79 @@ export function PagePW2(props) {
     return (
         <MultiContentContainer titlesTabs={titlesTabs} content={content}></MultiContentContainer>
     );
+}
+
+export class PageGZH0 extends React.Component {
+
+    render() {
+
+        const title = '公众号推文';
+        const cardTitle = '产品设计 | 时间的礼物 | 师承原研哉，异国土壤上流放故乡的花';
+        const cardSubtitle = '时间的礼物，名为度过。';
+        const link = 'https://mp.weixin.qq.com/s/40TYZ7xDewrv8qV8FYNaWw';
+
+        return (
+            <SingleContentContainer content={<CardContentLayout title={cardTitle} subtitle={cardSubtitle} link={link}/>} title={title}/>
+        );
+    }
+}
+
+export class PageGZH1 extends React.Component {
+
+    render() {
+
+        const title = '公众号推文';
+        const cardTitle = '装置艺术| 回想 回想| 浙江展览馆展出中| 古典诗歌与神经网络的交互艺术';
+        const cardSubtitle = '当设计与编程碰撞，当机器寻找诗心。浙江展览馆4号厅，6.1-6.12';
+        const link = 'https://mp.weixin.qq.com/s/8qYwWBoebysw8vlWYXU6uw';
+
+        return (
+            <SingleContentContainer content={<CardContentLayout title={cardTitle} subtitle={cardSubtitle} link={link}/>} title={title}/>
+        );
+    }
+}
+
+export class PageGZH2 extends React.Component {
+
+    render() {
+
+        const title = '公众号推文';
+        const cardTitle = '深度访谈| 回想 回想/那心的铁片/也要发出轰响| 完整作品及创作历程分享';
+        const cardSubtitle = '诗心的共振：从汉字设计、实验海报到交互艺术装置。';
+        const link = 'https://mp.weixin.qq.com/s/4wEyE0wHCFw4OUH6wSTqIQ';
+
+        return (
+            <SingleContentContainer content={<CardContentLayout title={cardTitle} subtitle={cardSubtitle} link={link}/>} title={title}/>
+        );
+    }
+}
+
+class CardContentLayout extends React.Component {
+    render() {
+        return (
+            <div className="card-layout">
+
+                <div className="card-wrapper-border">
+                    <div className="card-wrapper">
+                        <a className="card-link" target="_blank" href={this.props.link}></a>
+                        
+                        <div className="card-center">
+                            <div className="link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 50 50"><path d="M27.25,35.693l-9.765,9.765a6.342,6.342,0,0,1-8.809,0,6.217,6.217,0,0,1,0-8.809l9.765-9.765a2.527,2.527,0,0,0-3.574-3.574L5.1,33.1A11.275,11.275,0,0,0,21.033,49.033l9.791-9.765a2.527,2.527,0,1,0-3.574-3.574ZM48.844,5.29a11.3,11.3,0,0,0-15.932,0l-9.791,9.765A2.527,2.527,0,0,0,26.7,18.629l9.765-9.765a6.342,6.342,0,0,1,8.809,0,6.217,6.217,0,0,1,0,8.809L35.5,27.438a2.527,2.527,0,1,0,3.574,3.574l9.765-9.791a11.3,11.3,0,0,0,0-15.932ZM18.994,35.14a2.552,2.552,0,0,0,3.574,0L34.951,22.757a2.527,2.527,0,0,0-3.574-3.574L18.994,31.566a2.517,2.517,0,0,0,0,3.574Z" transform="translate(-2.129 -2.005)" fill="#7399d8"/></svg>
+                            </div>
+                            <div className="card-content">
+                                <p className="card-title">{this.props.title}</p>
+                                <p className="card-subtitle">{this.props.subtitle}</p>                            
+                        </div>
+
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 class ListContentLayout extends React.Component {

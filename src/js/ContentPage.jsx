@@ -17,6 +17,10 @@ import {
     PagePW1,
     PagePW2,
     PagePW3,
+
+    PageGZH0,
+    PageGZH1,
+    PageGZH2,
 } from "./Pages.jsx";
 
 
@@ -51,6 +55,11 @@ export class ContentPage extends React.Component {
             '#pw_1': () => <PagePW1 />,
             '#pw_2': () => <PagePW2 />,
             '#pw_3': () => <PagePW3 />,
+
+
+            '#gzh_0': () => <PageGZH0 />,
+            '#gzh_1': () => <PageGZH1 />,
+            '#gzh_2': () => <PageGZH2 />,
 
             "#home" : () => null,
         }
