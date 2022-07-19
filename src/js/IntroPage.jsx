@@ -22,7 +22,7 @@ export class IntroPage extends React.Component {
                 <p>
                     Imogen Liu 是 ... ...
                     <br/><br/><br/><br/><br/>
-                    <br/><span className="large">一颗诚实的苹果树。</span>
+                    <br/><span className="large">一棵诚实的苹果树。</span>
                     <br/><br/><br/><br/><br/>
                     <br/>因为，
                 </p>
